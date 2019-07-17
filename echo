@@ -1,0 +1,7 @@
+git 명령어 echo
+echo 명령어는 새로운 파일과 그 내용을 같이 생성할 수 있다.
+
+사용
+$ echo 'contents' >> README.md
+
+'contents'라는 내용이 든 새로운 파일 README.md 를 생성한다.
