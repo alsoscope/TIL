@@ -1,6 +1,6 @@
 __CodingTest Level1__
 
-## h2 정수 num이 양수일 경우 Even 반환, 홀수는 Odd
+## 정수 num이 양수일 경우 Even 반환, 홀수는 Odd
 
 	class Solution {
 	  public String solution(int num) {
