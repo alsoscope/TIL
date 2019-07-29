@@ -61,6 +61,34 @@ Array.sort()를 이용한 오름차순 정렬
 	 //import java.util.Arrays;
 ---
 
+	import java.util.Arrays;
+
+	class Solution {
+	  public int solution(int[] d, int budget) {
+	      int answer=0;
+	      int result=0;
+
+	      Arrays.sort(d);
+
+	      //배열 하나씩 더해가며 값을 비교, 다 더했는데도 budget보다 크지 않다,
+	      //같거나 작다면 최대값은 배열의 길이와 같다
+	      for(int i=0; i<d.length; i++){
+		  result+=d[i]; //작은 값부터 더해가며 비교
+		  if(result > budget) {
+		      answer=i;
+		      break;
+		  }
+	      }
+	      //budget보다 클 때 종료하거나, 다 더했는데 작거나 같은 경우 예외적으로 처리한다
+	      if(result <= budget){
+		  answer=d.length;
+	      }
+	      return answer;
+	  }
+	}
+
+
+
 ***
 
 
