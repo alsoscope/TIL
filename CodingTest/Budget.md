@@ -29,6 +29,8 @@ Array.sort()를 이용한 오름차순 정렬
 
 
 ---
+	import java.util.Arrays;
+	
 	class Solution {
 		public int solution(int[] d, int budget){
 			//answer는 예산을 지원해준 부서의 개수를 나타냄
@@ -39,26 +41,24 @@ Array.sort()를 이용한 오름차순 정렬
 		       //많은 부서를 지원하기 위해선 적은 신청 금액의 부서를 budget에서 먼저 빼준다
 		       //적은 금액부터 정리하려면 먼저 배열을 오름차순으로 정리한다
 		       //Arrays.sort()는 배열을 오름차순 정렬하는 함수
+			Arrays.sort(d);
 			
 			//예산이 0이 되거나, 남은 예산보다 나머지 신청 금액이 클 경우 종료하도록 한다
+			for(int i=0; i<d.length; i++){
+			  if(budget==0 || budget<d[i]){
+			      break;
+			  }
+			  budget-=d[i];
+			  answer++;
+		      }
 			
-			return answer;
-			}
-			
-			Arrays.sort(d);
-      
-      for(int i=0; i<d.length; i++){
-          if(budget==0 || budget<d[i]){
-              break;
-          }
-          budget-=d[i];
-          answer++;
-      }
-      
+		return answer;
+		}
 	}
 	
 	error: cannot find symbol
      	 Arrays.sort(d);
+	 //import java.util.Arrays;
 ---
 
 ***
