@@ -27,7 +27,6 @@ __입출력 예__
 Array.sort()를 이용한 오름차순 정렬
 예산을 초과하면 종료(budget이 0이 되거나, 나머지 예산과 남은 신청 금액이 맞지 않을 때)
 
-
 ---
 	import java.util.Arrays;
 	
@@ -59,6 +58,7 @@ Array.sort()를 이용한 오름차순 정렬
 	error: cannot find symbol
      	 Arrays.sort(d);
 	 //import java.util.Arrays;
+	 
 ---
 
 	import java.util.Arrays;
@@ -87,9 +87,23 @@ Array.sort()를 이용한 오름차순 정렬
 	  }
 	}
 
-
-
 ***
 
+	import java.util.Arrays;
 
+	class Solution {
+	  public int solution(int[] d, int budget) {
+	      int answer=0;
 
+	      Arrays.sort(d);
+
+	      for(int i=0; i<d.length; i++){
+		  budget -= d[i];
+		  if(budget < 0) break;
+		  answer ++;
+	      }
+	
+		//for문 완전히 빠져나오면 이미 최대값을 지났다는 뜻이므로 그 값이 결과값이 되어 return됨
+	      return answer;
+	    }
+	}
