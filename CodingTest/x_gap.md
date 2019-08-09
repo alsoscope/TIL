@@ -14,17 +14,24 @@ __입출력 예__
 | 4 | 3 | [4,8,12] |
 | -4 | 2 | [-4,-8] |
 
-
+int 최대값 약 -21억~21억 저장
+자연수 * 조건로 answer[i]에는 int 가 저장되지만 제한 조건 때문에 초과됨.
+그렇기에 Long.valueOf 으로 형변환한다.
 
 ---
 
 	class Solution {
-		public long[] solution(int x, int n) {
-				long[] answer = {};
-				return answer;
-		}
+	  public long[] solution(int x, int n) {
+	      long[] answer = {};
+
+	      answer=new long[n];
+
+	      for(int i=0; i<n; i++){
+		answer[i]=(Long.valueOf(x)*(i+1));    
+	      }
+
+	      return answer;
+	  }
 	}
 	
 ---
-
-
