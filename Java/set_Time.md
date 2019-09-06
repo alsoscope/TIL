@@ -44,14 +44,8 @@ regist DATETIME DEFAULT CURRENT_TIMESTAMP<br>
 현재 Timestamp 값을 insert 시점에 기본값으로 set한다<br>
 이때, update필드에는 null값이 들어감<br>
 
-![2.jpg](C:\Users\a\Desktop)<br>
-UPDATE 필드에는 기본 NULL
-
 update DATETIME ON UPDATE CURRENT_TIMESTAMP<br>
 해당 row가 update될 경우 자동으로 해당 시점의 timestamp값으로 set된다<br>
-
-![1.jpg](C:\Users\a\Desktop)<br>
-ON UPDATE 될 경우 set된다
 
 ---
 __TIMESTAMP__
