@@ -23,3 +23,29 @@ num은 1이상 8000000 미만의 정수
 |16|4|
 |626331|-1|
 
+---
+
+      class Solution {
+      public int solution(int num) {
+          int answer = 0;
+          long n = (long)num;
+
+          //1이 되면 반복 종료
+          while(n > 1){
+              if(n % 2 == 0){
+                  n/=2;
+              }else if(n % 2 == 1){
+                  n=(3*n)+1;
+              }
+              answer++;
+
+              if(answer > 500){
+                  answer = -1;
+                  break;
+              }
+          }
+          return answer;
+      }
+    }
+  
+---
