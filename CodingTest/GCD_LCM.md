@@ -19,5 +19,52 @@ __CodingTest Level1__
 ---
 
 
+package practice;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class GCD_LCM {
+	
+	public static int[] gcdlcm(int a, int b) {
+		int[] answer = new int[2];
+	    int big, small;
+	    int remain = 1;
+	    
+	      if(a > b){
+	          big = a;
+	          small = b;
+	      }else{
+	          big = b;
+	          small = a;
+	      }    
+	    try {
+	    	
+		    while(remain > 0){
+		    	remain = big % small;
+		        big=small;
+		        small=remain;
+		    }
+		      
+		    System.out.println();
+		    answer[0]=big;
+		    answer[1]=a*b/big;
+		
+	    } catch (ArithmeticException e) {
+	    	e.printStackTrace();
+	    }
+	    
+		return answer;
+	}
+	
+	public static void main(String args[]) {
+		int n, m;
+		Scanner scan = new Scanner(System.in);
+		n = scan.nextInt();
+		m = scan.nextInt();
+		System.out.println("main : "  + Arrays.toString(gcdlcm(n, m)));
+		scan.close();
+	}
+}
 
 ---
