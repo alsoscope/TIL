@@ -17,3 +17,43 @@ __CodingTest Level 1__
 |[4,3,2,1]|[4,3,2]|
 |[10]|[-1]|
 
+---
+
+	class Solution {
+		public int[] solution(int[] arr) {
+				int[] answer = {};
+
+				//제거할 수 있는 수가 없는 배열이라면 -1 리턴
+				//(배열이 비었거나 1개의 데이터만 존재)
+				if(arr.length == 1){
+						return new int[]{-1};
+				}
+
+				//최소값 설정. MAX_VALUE는 메소드를 찾을 수 없다하여
+				//배열의 0번지 값을 저장한다.
+				//int min = Integer.MAX_VALUE();
+				int min = arr[0];
+				int index=0;
+
+				//최소값 결정
+				for(int i=0; i<arr.length; i++){
+						if(arr[i]<min){
+								min=arr[i];
+								index=i;
+						}
+				}
+
+				answer=new int[arr.length-1];
+
+				//제일 작은 수(index)를 빼고 나머지 복사함
+				for(int i=0, j=0; i<answer.length; i++, j++){
+						if(index==i) 
+								j++;
+						answer[i]=arr[j];
+				}
+
+				return answer;
+		}
+	}
+
+---
