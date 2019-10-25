@@ -19,4 +19,20 @@ n이 양의 정수 x의 제곱이라면 x+1의 제곱을 리턴하고, n이 양�
 
 ---
 
+	class Solution {
+		public long solution(long n) {
+				long answer = 0;
+
+				int i=(int)Math.sqrt(n);
+				double d=Math.sqrt(n);
+
+				if(i==d){
+						answer = (long)Math.pow(d+1, 2);     
+						return answer;
+				}else{
+						return -1;
+				}
+		}
+	}
+
 ---
