@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+  xmlns:beans="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security.xsd">
+
+
+<!-- http 태그 : 접근 권한 설정. ROLE_USER 권한이 있는 사용자만 접근할 수 있게 설정.
+다양한 접근 권한 구현을 원한다면 인터셉터를 더 많이 추가하면 된다. access의 첫 문자 패턴은 ROLE_로 시작해야한다. 변경할 수 있지만 가급적 모든 권한은 ROLE_로 시작-->
+<!-- 좀 더 유연한 접근 권한 설정을 위해 어노테이션 사용. 각 어플리케이션에 맞게 개별적으로 설정하는 것이 효과적. CGlib 라이브러리 필요하다.
+security-context.xml 파일은 공통적인 보안에 대한 설정을 담당하는 파일이라고 생각하면... -->
+<http auto-config="true"> 
+
+	<intercept-url pattern="/" access="ROLE_USER" />
+	<intercept-url pattern="/admin/test" access="ROLE_USER"/>
+	<intercept-url pattern="/admin/**" access="ROLE_ADMIN"></intercept-url>
+</http>
+<!-- 관리자 계정을 추가하고 관리자 계정만 접근 할 수 있는 어플리케이션을 만들어 테스트. -->
+<!-- admin의 하위 폴더에는 다른 권한을 줘야할 때, 최상위 권한을 제일 하위에 등록하고 그 위에 추가할 경로의 권한을 둔다.
+접근 권한은 위에서 아래로 순차적으로 인터셉터가 처리하게 됨. intercept-url의 pattern은 말그대로 경로의 패턴 값을 입력. 경로 값X -->
+	
+<!-- authentication-manager : 이 태그는 접근 권한 부여. ROLE_USER라는 권한을 부여한다. -->
+<authentication-manager> 
+	<authentication-provider> 
+		<user-service>
+			<user name="guest" password="guest" authorities="ROLE_USER"/> 
+			<user name="admin" password="admin" authorities="ROLE_ADMIN"></user>
+			</user-service> 
+		</authentication-provider> 
+	</authentication-manager> 
+
+</beans:beans>
