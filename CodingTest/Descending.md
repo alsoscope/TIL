@@ -10,3 +10,25 @@
 |n|return|
 |--|--|
 |118372|873211|
+
+---
+
+    import java.util.Arrays;
+
+    class Solution {
+      public long solution(long n) {
+          long answer = 0;
+
+          String[] nArr = String.valueOf(n).split(""); 
+          Arrays.sort(nArr);
+
+          String nStr=new String("");
+          for(int i = nArr.length-1; i>=0; i--){
+              nStr += nArr[i];
+              answer=Long.parseLong(nStr);
+          }
+          return answer;
+      }
+    }
+
+---
