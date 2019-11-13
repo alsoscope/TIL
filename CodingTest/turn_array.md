@@ -13,3 +13,29 @@
 |n|return|
 |---|---|
 |12345|[5,4,3,2,1]|
+
+---
+
+    class Solution {
+      public int[] solution(long n) {
+
+          //long타입 변수 n에 담긴 문자열을 String 문자열로 선언.
+          String nStr=new String(n+"");
+
+          //toCharArray로 문자열을 쪼개 char[] 배열 temp에 저장
+          char[] temp=nStr.toCharArray();
+
+          //배열 answer를 글자수 길이만큼 할당.
+          int[] answer = new int[temp.length];
+
+          //Integer.parseInt로 문자열을 숫자로 변환.
+          //배열을 거꾸로 뒤집어 return한다.
+          for(int i=0; i<temp.length; i++){
+              answer[i]=Integer.parseInt(temp[temp.length-1-i]+"");
+          }
+
+          return answer;
+      }
+    }
+
+---
