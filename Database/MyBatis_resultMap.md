@@ -7,14 +7,14 @@ DB 필드명과 DTO 객체의 변수명(property)이 다를 때 사용.
 - 사용
   - mybatis_config.xml
 
-      <mapper namespace="com.p.project">
-        <resultMap id="etcResult" type="ProductDTO">
-            <result property="product_id" column="etc_item_id"/>
-            <result property="product_price" column="etc_item_price"></result>
-            <result property="product_desc" column="etc_item_desc"></result>
-        </resultMap
+        <mapper namespace="com.p.project">
+          <resultMap id="etcResult" type="ProductDTO">
+              <result property="product_id" column="etc_item_id"/>
+              <result property="product_price" column="etc_item_price"></result>
+              <result property="product_desc" column="etc_item_desc"></result>
+          </resultMap
 
-        <select id="productInfo" resultMap="etcResult">
-          select * from tbl_etc order by product_id
-        </select>
-      </mapper>
+          <select id="productInfo" resultMap="etcResult">
+            select * from tbl_etc order by product_id
+          </select>
+        </mapper>
