@@ -19,4 +19,21 @@
 
 ---
 
+    class Solution {
+      public String solution(String s, int n) {
+          String answer = "";
+
+          for(int i=0; i<s.length(); i++){
+              char str = s.charAt(i);
+
+              if(str != ' '){
+                  char start=Character.isLowerCase(str) ? 'a' : 'A';
+                  str=(char)(start + (str+n-start) % 26);
+              }
+              answer+=str;
+          }
+          return answer;
+      }
+    }
+
 ---
