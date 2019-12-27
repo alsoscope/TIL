@@ -37,3 +37,40 @@
     }
 
 ---
+
+---
+
+    class Solution {
+      public String solution(String s, int n) {
+          String answer = "";
+
+          int num=0;
+        char[] arr=new char[s.length()];
+
+        while(n > 26) {
+          n=n-26;
+        }
+
+        for(int i=0; i<s.length(); i++) {
+          if(s.charAt(i) >= 'A' && s.charAt(i) <= 'Z') {
+            if((int)s.charAt(i) + n > 'Z')
+              num=(int)s.charAt(i)+n-26;
+            else
+              num=(int)s.charAt(i)+n;
+            arr[i]=(char)num;
+          }else if(s.charAt(i) >= 'a' && s.charAt(i) <= 'z'){
+            if((int)s.charAt(i) + n > 'z')
+              num=(int)s.charAt(i)+n-26;
+            else
+              num=(int)s.charAt(i)+n;
+            arr[i]=(char)num;
+          } else {
+            arr[i]=s.charAt(i);
+          }
+          answer+=arr[i];
+        }
+          return answer;
+      }
+    }
+
+---
