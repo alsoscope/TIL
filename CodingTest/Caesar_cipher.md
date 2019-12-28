@@ -38,8 +38,6 @@
 
 ---
 
----
-
     class Solution {
       public String solution(String s, int n) {
           String answer = "";
@@ -74,3 +72,41 @@
     }
 
 ---
+
+    class Solution {
+      public String solution(String s, int n) {
+          int ascii[]=new int[s.length()];
+        char chars[]=new char[s.length()];
+
+        //StringBuilder 클래스. 변경할 수 있는 문자열을 나타낸다.
+        StringBuilder answer=new StringBuilder();
+
+        for(int i=0; i<chars.length; i++) {
+          chars[i]=s.charAt(i);
+
+          //대문자일 경우 ASCII 코드 기준 A=65, Z=90
+          if(chars[i] > 64 && chars[i] < 91) {
+            ascii[i]=chars[i]+n;
+
+            if(ascii[i] > 90) {
+              ascii[i]-=26;
+            }
+          //소문자일 경우 ASCII 코드 기준 a==97, z==122
+          }else if(chars[i] > 96 && chars[i] < 123) {
+            ascii[i]=chars[i]+n;
+
+            if(ascii[i]>122) {
+              ascii[i]-=26;
+            }
+          } else if(chars[i] == 32) {
+            //공백일 경우
+            //ASCII 코드 기준 공백(space) = 32
+            ascii[i]=32;
+
+            //char를 StringBuilder로 합친다
+          }	
+          answer.append(Character.toString((char) ascii[i]));
+        }
+        return answer.toString();
+      }
+    }
