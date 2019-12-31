@@ -110,3 +110,50 @@
         return answer.toString();
       }
     }
+
+---
+
+    class Solution {
+      public String solution(String s, int n) {
+        String answer="";
+
+        String lower="abcdefghijklmnopqrstuvwxyz";
+        String upper=lower.toUpperCase();
+
+        String[] lowerA=lower.split("");
+        String[] upperA=upper.split("");
+        String[] input=s.split("");
+
+        for(int i=0; i<input.length; i++) {
+          int value=0;
+
+          //대문자일 경우
+          for(int j=0; j<upperA.length; j++) {
+            if(input[i].equals(upperA[j])) {
+            value=j+n;
+              if(value>=26)
+                value-=26;
+            answer+=upperA[value];
+            break;
+
+          //소문자일 경우
+          }else if(input[i].equals(lowerA[j])) {
+            value=j+n;
+              if(value >= 26) {
+                value-=26;
+              }
+            answer+=lowerA[value];
+            break;
+          }else if(" ".equals(input[i])) {
+            answer+=" ";
+            break;
+          }
+          }
+        }
+        return answer;
+      }
+    }
+
+---
+
+ref https://kutar37.tistory.com/entry/%EC%9E%90%EB%B0%94java-%EC%8B%9C%EC%A0%80%EC%95%94%ED%98%B8
