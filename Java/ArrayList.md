@@ -38,3 +38,17 @@
         }
         
 ref https://edu.goorm.io/learn/lecture/41/%EB%B0%94%EB%A1%9C%EC%8B%A4%EC%8A%B5-%EC%83%9D%ED%99%9C%EC%BD%94%EB%94%A9-%EC%9E%90%EB%B0%94-java/lesson/39156/arraylist%EC%9D%98-%EC%82%AC%EC%9A%A9%EB%B2%95
+
+https://galgum.tistory.com/18
+
+
+## List 와 ArrayList의 차이
+
+List list = new ArrayList();<br>
+ArrayList list = new ArrayList();
+
+- 자바의 다형성<br>
+List 인터페이스에 상속된 클래스인 ArrayList, LinkedList... 등이 있다.
+
+- ArrayList 정렬<br>
+Collections.sort() 메소드를 사용한다.
