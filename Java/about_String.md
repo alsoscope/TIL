@@ -56,4 +56,13 @@ string[] num2=str.split("-", 4); 라면,<br>
 	char word=words.charAt(3); //"세"
 	system.out.println(word);
 
+## 자바 문자열 비교 메소드
+
+- __.equals()__<br>
+equals() 메소드는 대소문자를 구분하여 비교
+
+- **.equalsIgnoreCase()**<br>
+equalsIgnoreCase() 메소드는 대소문자를 구분하지 않고 비교
+
+
 ref https://jamesdreaming.tistory.com/84 https://coding-factory.tistory.com/126
