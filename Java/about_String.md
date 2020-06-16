@@ -64,5 +64,25 @@ equals() 메소드는 대소문자를 구분하여 비교
 - **.equalsIgnoreCase()**<br>
 equalsIgnoreCase() 메소드는 대소문자를 구분하지 않고 비교
 
+## indexOf()
+문자열 중 입력받은 문자가 있으면 해당 문자의 위치(index) 값을 리턴하고,<br>
+문자가 없으면 -1 리턴
+
+	String str = "Hello world";
+	System.out.println(str.indexOf("e"));
+	//index 값인 1리턴
+	//"wo" 를 찾으려 할 경우 6리턴 
+
+## replaceAll()
+특정 문자열을 원하는 문자열로 치환
+
+replaceAll(String regex, String replacement)<br>
+첫 번째 인자는 변환하고자 하는 대상이 되는 문자열, 두 번째는 변환할 문자값
+
+	String str = "Hello world";
+	System.out.println(replaceAll("ll", "!!"));//He!!o world
+
+	String str2 = "Hello world";
+	System.out.println(replaceAll("o w", "오 더블유"));//Hell오 더블유orld
 
 ref https://jamesdreaming.tistory.com/84 https://coding-factory.tistory.com/126
