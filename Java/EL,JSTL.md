@@ -23,13 +23,24 @@ value : 값. EL ${} 사용<br>
 - c:url<br>
 URL을 생성해준다
 
-    <c:url var="[선택]변수명" value="[필수]URL주소" />
+        <c:url var="[선택]변수명" value="[필수]URL주소" />
+
+JSP에서 <c:url value="URL 주소"/> 이렇게만 실행시키면 화면에 URL 주소가 찍힘
 
 - c:redirect<br>
-페이지 이동
+페이지 이동. response.sendRedirect() 와 같은 기능
 
-    <c:redirect url="[필수]이동할 URL" />
+        <c:redirect url="[필수]이동할 URL" />
 
+- c:import<br>
+지정된 URL을 태그가 사용된 JSP 페이지에 출력<br>
+URL 속성에는 HTTP 뿐만 아니라 FTP 외부 리소스를 JSP 페이지에 삽입. (내부, 외부 자원)
+
+       <c:import url=""/>
+    
+HTML의 include 역할
+
+css, gif 같은 자원들이 404 Not Found 될 수 있다.
 
 ref https://anyframe.tistory.com/375<br>
 https://hackersstudy.tistory.com/42<br>
