@@ -28,9 +28,13 @@ URL을 생성해준다
 JSP에서 <c:url value="URL 주소"/> 이렇게만 실행시키면 화면에 URL 주소가 찍힘
 
 - c:redirect<br>
-페이지 이동. response.sendRedirect() 와 같은 기능
+페이지 이동. response.sendRedirect() 와 같은 기능.
+
 
         <c:redirect url="[필수]이동할 URL" />
+        
+><jsp:forward> 액션태그. 서버사이드에서 구현된 요청 형태만 포워딩.<br>
+같은 서블릿 컨텍스트 내의 다른 페이지로만 이동.
 
 - c:import<br>
 지정된 URL을 태그가 사용된 JSP 페이지에 출력, 첨부<br>
@@ -40,12 +44,13 @@ URL 속성에는 HTTP 뿐만 아니라 FTP 외부 리소스를 JSP 페이지에 
     
 css, gif 같은 자원들이 404 Not Found 될 수 있다.
 
-HTML의 include 역할
+>HTML의 include 역할
 
 동적인 방식 <jsp:include page=""><br>
 정적인 방식 <%@ include file="" %> 지시자<br>
-둘 모두 같은 웹 어플리케이션/Servlet Context 안에 있는 페이지만 불러들인다.
+같은 웹 어플리케이션/Servlet Context 안에 있는 페이지만 불러들인다.
 
 ref https://anyframe.tistory.com/375<br>
 https://hackersstudy.tistory.com/42<br>
-https://itjava.tistory.com/71
+https://itjava.tistory.com/71<br>
+http://theeye.pe.kr/archives/1563
