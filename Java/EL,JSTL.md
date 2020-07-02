@@ -38,7 +38,7 @@ JSP에서 <c:url value="URL 주소"/> 이렇게만 실행시키면 화면에 URL
 
 - c:import<br>
 지정된 URL을 태그가 사용된 JSP 페이지에 출력, 첨부<br>
-URL 속성에는 HTTP 뿐만 아니라 FTP 외부 리소스를 JSP 페이지에 삽입. (내부, 외부 자원)
+URL 속성에는 HTTP 뿐만 아니라 FTP 외부 리소스를 JSP 페이지에 삽입. (내부, 외부 자원 모두 import 가능.)
 
        <c:import url=""/>
     
@@ -49,6 +49,8 @@ css, gif 같은 자원들이 404 Not Found 될 수 있다.
 동적인 방식 <jsp:include page=""><br>
 정적인 방식 <%@ include file="" %> 지시자<br>
 같은 웹 어플리케이션/Servlet Context 안에 있는 페이지만 불러들인다.
+
+지시자 태그의 경우 include 되는 위치가 중요하다.
 
 ref https://anyframe.tistory.com/375<br>
 https://hackersstudy.tistory.com/42<br>
