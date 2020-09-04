@@ -15,7 +15,8 @@
 
 		var urlParams = new URLSearchParams(newParam);
 		//URLSearchParams ↓
-    `URLSearchParams 인터페이스는 URL의 쿼리 문자열에 대해 작업할 수 있는 유틸리티 메서드를 정의합니다.`
+    `URLSearchParams 인터페이스는 URL의 쿼리 문자열에 대해 작업할 수 있는 유틸리티 메서드를 정의합니다.`<br>
+    IE에서 지원안됨.
 		
 		window.onload = function(){
 			document.writeln(newParam2);
