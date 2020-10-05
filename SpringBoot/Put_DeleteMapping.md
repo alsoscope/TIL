@@ -1,4 +1,4 @@
-Delete Mapping 사용
+Delete,Put,Patch Mapping 사용
 
 ---
 
@@ -33,3 +33,10 @@ action="/board_Delete/${board.bno }" form 태그에 추가해서 컨트롤러 �
 
 ref https://www.hanumoka.net/2018/09/02/spring-20180902-Spring4-Rest-HiddenMethod/<br>
 https://bbiyakbbiyak.tistory.com/1
+
+
+---
+
+Ajax 로 처리할 수 있다.
+
+컨트롤러에서 json으로 응답
