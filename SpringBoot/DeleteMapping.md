@@ -10,7 +10,7 @@ HiddenHttpMethodFilter 추가
       return filter;
     }
 
-GET/POST만 지원하는 브라우저에서 RESTful 가능케 해줌.
+GET/POST만 지원하는 브라우저에서 RESTful 기능인 PUT, PATCH, DELETE 가능케 해줌.
 
 ---
 
@@ -28,7 +28,7 @@ Spring Form Tag 사용을 위한 JSTL 태그 라이브러리 추가
 
     <input type="hidden" name="_method" value="DELETE">
 
-하지만 나는 그냥 일반적인 HTML form 에 input hidden 태그를 추가했다.<br>
+하지만 나는 그냥 일반적인 HTML form 에 위의 input hidden 태그를 추가했다.<br>
 action="/board_Delete/${board.bno }" form 태그에 추가해서 컨트롤러 매핑.
 
 ref https://www.hanumoka.net/2018/09/02/spring-20180902-Spring4-Rest-HiddenMethod/<br>
