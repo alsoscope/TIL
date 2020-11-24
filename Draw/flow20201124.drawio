@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-24T07:47:14.402Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="MO5oGsteQ61z78dSuz4i" version="13.10.1" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-24T08:28:10.865Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="5G3djn7m7vMHVU4h7jbu" version="13.10.1" type="github">
   <diagram id="XsG1NGjMLy8Txl2xfddT" name="Page-1">
     <mxGraphModel dx="1902" dy="1047" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -217,11 +217,17 @@
         <mxCell id="0Azxwh3zIwe1iMM0iR9Q-49" value="&lt;span style=&quot;font-size: 18px&quot;&gt;카드번호, 금액, 카드 유효기간 (년, 월), 할부기간&amp;nbsp;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="205" y="1060" width="180" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="0Azxwh3zIwe1iMM0iR9Q-50" value="&lt;font style=&quot;font-size: 18px&quot;&gt;sendDirectPayment&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="0Azxwh3zIwe1iMM0iR9Q-50" value="&lt;font style=&quot;font-size: 18px&quot;&gt;sendDirectPayment()&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="630" y="1430" width="190" height="60" as="geometry" />
         </mxCell>
         <mxCell id="0Azxwh3zIwe1iMM0iR9Q-51" value="&lt;font style=&quot;font-size: 18px&quot;&gt;PaymentCompleteActivity&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="445" y="1110" width="215" height="60" as="geometry" />
+          <mxGeometry x="615" y="1110" width="215" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0Azxwh3zIwe1iMM0iR9Q-52" value="&lt;font style=&quot;font-size: 18px&quot;&gt;MainActivity&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="1110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0Azxwh3zIwe1iMM0iR9Q-53" value="&lt;span style=&quot;font-size: 18px&quot;&gt;응답&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="435" y="1060" width="140" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
