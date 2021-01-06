@@ -37,4 +37,5 @@ response.sendRedirect("");
 
 
 
-ref https://haneulnoon.tistory.com/68
+ref https://haneulnoon.tistory.com/68 <br>
+https://blog.naver.com/samja19/221133461105
