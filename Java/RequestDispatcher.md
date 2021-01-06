@@ -33,3 +33,8 @@ set해서 get을 위임받은 컴포넌트에서는 사용할 수 없다.<br>
 바뀐 URL이 표시된다.
 
 response.sendRedirect("");
+
+
+
+
+ref https://haneulnoon.tistory.com/68
