@@ -38,4 +38,5 @@ response.sendRedirect("");
 
 
 ref https://haneulnoon.tistory.com/68 <br>
-https://blog.naver.com/samja19/221133461105
+https://blog.naver.com/samja19/221133461105 <br>
+https://blog.naver.com/susieredrum/150140312287
