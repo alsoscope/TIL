@@ -18,3 +18,8 @@ ajax 데이터타입 jsonp 또는 <p>
 https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Access-Control-Allow-Origin <br>
 https://roynus.tistory.com/52 <br>
 https://adrenal.tistory.com/16
+
+<br>
+ajax 통신 참고<p>
+https://sugerent.tistory.com/66
+ 
