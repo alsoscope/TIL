@@ -13,6 +13,9 @@ response.setHeader("Access-Control-Allow-Origin", "*");
 ajax 데이터타입 jsonp 또는 <p>
 응답받는 jsp 파일에 헤더를 추가해도 된다고 한다.
 
+ajax beforeSend? 추가하니까 또 CORS <br>
+스프링부트 어노테이션 추가로 해결<br>
+@CrossOrigin(origins="*", maxAge=3600)
 
 참조
 https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Access-Control-Allow-Origin <br>
