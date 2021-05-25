@@ -40,3 +40,34 @@ File home = FileSystemView.getFileSystemView().getDefaultDirectory();
     logger.info("File downloaded to : " + saveFilePath);
 
     writer.println("<script>alert('사본 다운로드 성공'); location.href='/eform/form.jsp';</script>");
+    
+    
+    
+    				// A binary file was returned
+				String disposition = conn.getHeaderField("Content-Disposition");
+				int index = disposition.indexOf("filename=");
+				String name = disposition.substring(index + 10, disposition.length() - 1);
+				
+				byte b[] = new byte[4096];
+
+				response.reset();
+				response.setContentType("application/octet-stream");
+
+				String Encoding = new String(name.getBytes("UTF-8"), "8859_1");
+				response.setHeader("Content-Disposition", "attatchment; filename = " + Encoding);
+
+				InputStream is = conn.getInputStream();
+				ServletOutputStream sos = response.getOutputStream();
+
+				int numRead;
+				while((numRead = is.read(b,0,b.length)) != -1){
+					sos.write(b,0,numRead);
+				}
+
+				sos.flush();
+				sos.close();
+				is.close();
+    
+    
+    
+    
