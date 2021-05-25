@@ -5,6 +5,11 @@ logger.info("home.getAbsolutePath : " +  home.getAbsolutePath());
 
 String dir = System.getProperty("user.home") + "\\Desktop";
 
+또는
+
+File home = FileSystemView.getFileSystemView().getDefaultDirectory();
+				logger.info("path : " + home);
+
 <br>
 
     // A binary file was returned
